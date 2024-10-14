@@ -9,8 +9,8 @@ on:
       - .github/workflows/benchmarks.yaml
       - .github/workflows/python-tests.yaml
       - "src/syntask/**/*.py"
-      - requirements.txt
-      - requirements-dev.txt
+      - requirements/requirements.txt
+      - requirements/requirements-dev.txt
       - setup.cfg
       - Dockerfile
   push:

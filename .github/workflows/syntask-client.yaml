@@ -7,8 +7,8 @@ on:
     paths:
       - client/*
       - src/syntask/**/*.py
-      - requirements.txt
-      - requirements-client.txt
+      - requirements/requirements.txt
+      - requirements/requirements-client.txt
       - setup.cfg
       - .github/workflows/syntask-client.yaml
   push:
@@ -17,8 +17,8 @@ on:
     paths:
       - client/*
       - src/syntask/**/*.py
-      - requirements.txt
-      - requirements-client.txt
+      - requirements/requirements.txt
+      - requirements/requirements-client.txt
       - setup.cfg
       - .github/workflows/syntask-client.yaml
   workflow_call:

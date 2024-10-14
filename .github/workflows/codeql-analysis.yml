@@ -13,8 +13,8 @@ on:
       - "**/*.py"
       - "**/*.js"
       - "**/*.ts"
-      - requirements.txt
-      - requirements-dev.txt
+      - requirements/requirements.txt
+      - requirements/requirements-dev.txt
       - setup.cfg
       - alembic.ini
 
