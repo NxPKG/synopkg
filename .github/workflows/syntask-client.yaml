@@ -7,8 +7,8 @@ on:
     paths:
       - client/*
       - src/syntask/**/*.py
-      - requirements.txt
-      - requirements-client.txt
+      - requirements/requirements.txt
+      - requirements/requirements-client.txt
       - setup.cfg
       - .github/workflows/syntask-client.yaml
   push:
@@ -17,8 +17,8 @@ on:
     paths:
       - client/*
       - src/syntask/**/*.py
-      - requirements.txt
-      - requirements-client.txt
+      - requirements/requirements.txt
+      - requirements/requirements-client.txt
       - setup.cfg
       - .github/workflows/syntask-client.yaml
   workflow_call:
@@ -48,7 +48,7 @@ jobs:
         with:
           python-version: "3.9"
           cache: "pip"
-          cache-dependency-path: "requirements-client.txt"
+          cache-dependency-path: "requirements/requirements-client.txt"
 
       - name: Create a temp dir to stage our build
         run: echo "TMPDIR=$(mktemp -d)" >> $GITHUB_ENV

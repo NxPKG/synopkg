@@ -4,9 +4,9 @@ on:
     paths:
       - .github/workflows/integration-tests.yaml
       - "src/syntask/**/*.py"
-      - requirements.txt
-      - requirements-client.txt
-      - requirements-dev.txt
+      - requirements/requirements.txt
+      - requirements/requirements-client.txt
+      - requirements/requirements-dev.txt
       - ui/**
       - .nvmrc
       - Dockerfile
@@ -17,9 +17,9 @@ on:
     paths:
       - .github/workflows/integration-tests.yaml
       - "**/*.py"
-      - requirements.txt
-      - requirements-client.txt
-      - requirements-dev.txt
+      - requirements/requirements.txt
+      - requirements/requirements-client.txt
+      - requirements/requirements-dev.txt
       - ui/**
       - .nvmrc
       - Dockerfile
@@ -61,7 +61,7 @@ jobs:
         id: cache-uv
         with:
           path: ~/.cache/uv
-          key: uvcache-${{ runner.os }}-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('requirements-client.txt', 'requirements.txt', 'requirements-dev.txt') }}
+          key: uvcache-${{ runner.os }}-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('requirements/requirements-client.txt', 'requirements/requirements.txt', 'requirements/requirements-dev.txt') }}
 
       - name: Install python packages
         run: |
